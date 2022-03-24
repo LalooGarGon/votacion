@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */

@@ -1,0 +1,36 @@
+<app-nav></app-nav>
+
+<div style="width: 80%; margin: auto; margin-top: 2rem">
+  <div>
+    <h2 class="text-white text-center mb-2">¿A QUIÉN LE DARÁS TU VOTO?</h2>
+    <h2 class="text-white text-center mb-2">
+      ESTADO: {{ estado.toUpperCase() }}
+    </h2>
+  </div>
+  <div class="row row-cols-2 row-cols-md-3 g-4 mt-2">
+    <div *ngFor="let candidato of candidatos">
+      <div class="card">
+        <div class="text-center">
+          <i class="fa-solid fa-user fa-5x m-3"></i>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center">
+            {{ this.EncrDecr.get(this.claveKey, candidato.nombre) }}
+          </h5>
+          <p class="card-text">
+            {{ this.EncrDecr.get(this.claveKey, candidato.frase) }}, votos:
+            {{ candidato.votos }}
+          </p>
+          <div class="text-center">
+            <button
+              class="btn btn-primary"
+              (click)="votar(candidato.id, candidato.nombre)"
+            >
+              Votar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+<app-nav></app-nav>
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+  "
+>
+  <div class="card" style="width: 21rem">
+    <div class="d-flex justify-content-center">
+      <i class="fa-solid fa-user fa-6x m-3"></i>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title text-center">Nuevo Votante</h5>
+      <form [formGroup]="formVotante" (ngSubmit)="submit()">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInput2"
+            placeholder="name@example.com"
+            formControlName="nombre"
+          />
+          <label for="floatingInput2">Nombre</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInput"
+            placeholder="name@example.com"
+            formControlName="curp"
+          />
+          <label for="floatingInput">CURP</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="Password"
+            formControlName="password"
+          />
+          <label for="floatingPassword">Contraseña</label>
+        </div>
+        <div class="mt-3">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            formControlName="estado"
+          >
+            <option selected="selected" value="Aguascalientes">
+              Aguascalientes
+            </option>
+            <option value="Baja California">Baja California</option>
+            <option value="Baja California Sur">Baja California Sur</option>
+            <option value="Campeche">Campeche</option>
+            <option value="Chiapas">Chiapas</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Ciudad de Mexico">Ciudad de Mexico</option>
+            <option value="Coahuila">Coahuila</option>
+            <option value="Colima">Colima</option>
+            <option value="Durango">Durango</option>
+            <option value="Guanajuato">Guanajuato</option>
+            <option value="Guerrero">Guerrero</option>
+            <option value="Hidalgo">Hidalgo</option>
+            <option value="Jalisco">Jalisco</option>
+            <option value="Estado de Mexico">Estado de Mexico</option>
+            <option value="Michoacan">Michoacan</option>
+            <option value="Morelos">Morelos</option>
+            <option value="Nayarit">Nayarit</option>
+            <option value="Nuevo Leon">Nuevo Leon</option>
+            <option value="Oaxaca">Oaxaca</option>
+            <option value="Puebla">Puebla</option>
+            <option value="Queretaro">Queretaro</option>
+            <option value="Quintana Roo">Qintana Roo</option>
+            <option value="San Luis Potosi">San Luis Potosi</option>
+            <option value="Sinaloa">Sinaloa</option>
+            <option value="Sonora">Sonora</option>
+            <option value="Tabasco">Tabasco</option>
+            <option value="Tamaulipas">Tamaulipas</option>
+            <option value="Tlaxcala">Tlaxcala</option>
+            <option value="Veracruz">Veracruz</option>
+            <option value="Yucatan">Yucatan</option>
+            <option value="Zacatecas">Zacatecas</option>
+          </select>
+        </div>
+        <div class="mt-3 text-center">
+          <button type="submit" class="btn btn-primary">Agregar</button>
+        </div>
+      </form>
+      <!-- [disabled]="!aFormGroup.valid" -->
+    </div>
+  </div>
+</div>
